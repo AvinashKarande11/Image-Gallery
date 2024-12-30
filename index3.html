@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="image-item" onclick="openImageModal(0)">
+                <img src="app1.jpg" alt="Image 1" class="gallery-image">
+            </div>
+            <div class="image-item" onclick="openImageModal(1)">
+                <img src="app2.jpg" alt="Image 2" class="gallery-image">
+            </div>
+            <div class="image-item" onclick="openImageModal(2)">
+                <img src="app3.jpg" alt="Image 3" class="gallery-image">
+            </div>
+            <div class="image-item" onclick="openImageModal(3)">
+                <img src="app4.jpg" alt="Image 4" class="gallery-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Image Viewing -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>
